@@ -175,7 +175,7 @@ def get_player_info():
                     "status": "success",
                     "message": "Player information retrieved successfully",
                     "data": player_data,
-                    "credits": "TEAM-AKIRU",
+                    "credits": "Team-Ujjaiwal",
                     "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
                 })
 
