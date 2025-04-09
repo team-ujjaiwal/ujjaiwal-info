@@ -10,7 +10,7 @@ import json
 app = Flask(__name__)
 
 # FF INFO ACC 
-DEFAULT_UID = "3197059560"
+DEFAULT_UID = "12345678"
 DEFAULT_PASS = "3EC146CD4EEF7A640F2967B06D7F4413BD4FB37382E0ED260E214E8BACD96734"
 JWT_GEN_URL = "https://ariflexlabs-jwt-gen.onrender.com/fetch-token"
 
@@ -97,7 +97,7 @@ def get_player_info():
             return jsonify({
                 "status": "error",
                 "message": "Player ID is required",
-                "credits": "TEAM-AKIRU",
+                "credits": "Team-Ujjaiwal",
                 "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
             }), 400
 
@@ -106,7 +106,7 @@ def get_player_info():
             return jsonify({
                 "status": "error",
                 "message": "Failed to generate JWT token",
-                "credits": "TEAM-AKIRU",
+                "credits": "Team-Ujjaiwal",
                 "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
             }), 500
 
@@ -183,14 +183,14 @@ def get_player_info():
                 return jsonify({
                     "status": "error",
                     "message": f"Failed to parse player information: {str(e)}",
-                    "credits": "TEAM-AKIRU",
+                    "credits": "Team-Ujjaiwal",
                     "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
                 }), 500
 
         return jsonify({
             "status": "error",
             "message": f"API request failed with status code: {response.status_code}",
-            "credits": "TEAM-AKIRU",
+            "credits": "Team-Ujjaiwal",
             "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         }), response.status_code
 
